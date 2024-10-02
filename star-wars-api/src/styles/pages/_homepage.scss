@@ -1,0 +1,48 @@
+// src/styles/HomePage.scss
+.homepage {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .character-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #f2f2f2;
+      }
+  
+      tr:hover {
+        background-color: #f9f9f9;
+      }
+    }
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  
+      button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,47 @@
+aside {
+    width: 250px;
+    background-color: #282c34;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    a {
+      color: #61dafb;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    button {
+      background: none;
+      border: none;
+      color: #ffcc00;
+      cursor: pointer;
+      font-size: 14px;
+  
+      &:hover {
+        color: #ff0000;
+      }
+    }
+  }
+  
