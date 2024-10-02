@@ -22,42 +22,40 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-             <Header />
+      <Header />
       <h1>Star Wars Characters</h1>
-      <table className="character-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {characters.map((character) => (
-            <tr key={character.name}>
-              <td>
-                <Link to={`/character/${character.url.split('/').slice(-2, -1)}`}>
-                  {character.name}
-                </Link>
-              </td>
-              <td>{character.gender}</td>
-              <td>
-                <button onClick={() => dispatch(addFavorite(character))}>
-                  Favorite
-                </button>
-              </td>
+      <div className="table-container">
+        <table className="character-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Gender</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {characters.map((character) => (
+              <tr key={character.name}>
+                <td>
+                  <Link to={`/character/${character.url.split('/').slice(-2, -1)}`}>
+                    {character.name}
+                  </Link>
+                </td>
+                <td>{character.gender}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="pagination">
         <button 
+          className="pagination-button" 
           disabled={currentPage === 1} 
           onClick={() => handlePageChange(currentPage - 1)}>
           Previous
         </button>
         <span>Page {currentPage} of {totalPages}</span>
         <button 
+          className="pagination-button" 
           disabled={currentPage === totalPages} 
           onClick={() => handlePageChange(currentPage + 1)}>
           Next

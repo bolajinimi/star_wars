@@ -1,48 +1,77 @@
-// src/styles/HomePage.scss
+// src/styles/pages/_homepage.scss
 .homepage {
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-  
+  padding: 20px;
+  background-color: #f8f9fa; // Light background for contrast
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #343a40; // Darker text color for visibility
+    text-align: center; // Center the title
+  }
+
+  .table-container {
+    max-width: 800px;
+    margin: 0 auto; // Center the table container
+    overflow: auto; // Allow scrolling on small screens
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add shadow for depth
+    background-color: #ffffff; // White background for the table
+
     .character-table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 20px;
-  
+
       th, td {
-        border: 1px solid #ccc;
-        padding: 10px;
+        border: 1px solid #dee2e6; // Light border color
+        padding: 12px; // Increase padding for better spacing
         text-align: center;
+        font-size: 18px; // Increase font size for better readability
       }
-  
+
       th {
-        background-color: #f2f2f2;
+        background-color: #e9ecef; // Light gray for headers
+        font-weight: bold; // Bold header text
       }
-  
-      tr:hover {
-        background-color: #f9f9f9;
-      }
-    }
-  
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-  
-      button {
-        padding: 5px 10px;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-  
-        &:disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
+
+      tr {
+        transition: background-color 0.3s; // Smooth transition for hover
+        &:hover {
+          background-color: #f1f1f1; // Slightly darker hover color
         }
       }
     }
   }
-  
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; // Center items vertically
+    gap: 20px;
+    margin-top: 20px; // Space between table and pagination
+
+    span {
+      font-size: 16px;
+      color: #343a40; // Dark text for visibility
+    }
+
+    .pagination-button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff; // Bootstrap primary color
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3; // Darker blue on hover
+      }
+
+      &:disabled {
+        background-color: #ccc; // Disabled state color
+        cursor: not-allowed;
+      }
+    }
+  }
+}

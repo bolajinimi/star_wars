@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../store/charactersSlice';
+import { MdFavoriteBorder, MdDelete } from "react-icons/md"; 
 import '../styles/App.scss';
 
 const CharacterDetails = () => {
@@ -21,21 +22,54 @@ const CharacterDetails = () => {
 
   return character ? (
     <div className="character-details">
-      <h2>{character.name}</h2>
-      <p>Height: {character.height}</p>
-      <p>Mass: {character.mass}</p>
-      <p>Hair: {character.hair}</p>
-      <p>Skin Color: {character.color}</p>
-     <p>Eye Color: {character.eye}</p>
-     <p>Birth Year: {character.birth}</p>
-     <p>Gender: {character.gender}</p>
-     <p>Homeworld: {character.homeworld}</p>
-     <p>Films: {character.films}</p>
-      <button onClick={() => (isFavorite ? dispatch(removeFavorite(character)) : dispatch(addFavorite(character)))}>
-        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+      <h2 className="character-name">{character.name}</h2>
+      <div className="character-info">
+        <div className="info-item">
+          <strong>Height:</strong> {character.height}
+        </div>
+        <div className="info-item">
+          <strong>Mass:</strong> {character.mass}
+        </div>
+        <div className="info-item">
+          <strong>Hair Color:</strong> {character.hair_color}
+        </div>
+        <div className="info-item">
+          <strong>Skin Color:</strong> {character.skin_color}
+        </div>
+        <div className="info-item">
+          <strong>Eye Color:</strong> {character.eye_color}
+        </div>
+        <div className="info-item">
+          <strong>Birth Year:</strong> {character.birth_year}
+        </div>
+        <div className="info-item">
+          <strong>Gender:</strong> {character.gender}
+        </div>
+        <div className="info-item">
+          <strong>Homeworld:</strong> {character.homeworld}
+        </div>
+        <div className="info-item">
+          <strong>Films:</strong> {character.films.join(', ')}
+        </div>
+      </div>
+      <button
+        className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
+        onClick={() =>
+          isFavorite ? dispatch(removeFavorite(character)) : dispatch(addFavorite(character))
+        }
+      >
+        {isFavorite ? (
+          <>
+            Remove <MdDelete />
+          </>
+        ) : (
+          <>
+            Add  <MdFavoriteBorder /> 
+          </>
+        )}
       </button>
     </div>
-  ) : (
+  )  : (
     <div>Loading...</div>
   );
 };

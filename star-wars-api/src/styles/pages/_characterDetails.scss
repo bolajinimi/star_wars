@@ -1,35 +1,55 @@
 .character-details {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 20px auto;
-  
-    h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-  
-    p {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #666;
-    }
-  
-    button {
-      background-color: #61dafb;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-  
-      &:hover {
-        background-color: #21a1f1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px; // Increase max-width for a better layout
+  margin: 20px auto;
+  text-align: left; // Align text to the left for a more structured look
+
+  .character-name {
+    font-size: 32px; // Increase the font size for the name
+    margin-bottom: 15px;
+    color: #1a1a1a; // Darker color for better readability
+    text-align: center; // Center the name
+  }
+
+  .character-info {
+    display: grid; // Use a grid layout for the info items
+    grid-template-columns: repeat(2, 1fr); // Two columns
+    gap: 10px; // Space between items
+    margin-bottom: 20px; // Space below the info section
+
+    .info-item {
+      font-size: 16px; // Keep the same font size
+      color: #555; // Slightly darker gray
+      background-color: #f9f9f9; // Light background for info items
+      padding: 10px; // Padding for a better feel
+      border-radius: 8px; // Rounded corners
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Light shadow for depth
+
+      strong {
+        color: #333; // Stronger color for labels
       }
     }
   }
-  
+
+  .favorite-button {
+    background-color: #61dafb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px; // More rounded corners
+    cursor: pointer;
+    font-size: 18px; // Slightly larger font size
+    transition: background-color 0.3s ease; // Smooth transition
+
+    &.favorited {
+      background-color: #ff4c4c; // Red color when favorited
+    }
+
+    &:hover {
+      background-color: #21a1f1; // Hover effect
+    }
+  }
+}
