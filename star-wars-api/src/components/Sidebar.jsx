@@ -2,28 +2,26 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite } from '../store/charactersSlice';
-// import { CiCircleRemove } from "react-icons/ci";
+import StarWars from '../assets/star_wars_logo.webp';
 
 const Sidebar = () => {
   const favorites = useSelector((state) => state.characters.favorites);
   const dispatch = useDispatch();
 
-  // Load favorites from localStorage on component mount
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    if (storedFavorites.length) {
-      // Dispatch action to add stored favorites to the Redux store if needed
-      // Here you would dispatch an action to add these to your state
-    }
+    // Logic to dispatch stored favorites if needed
   }, []);
 
-  // Update localStorage whenever favorites change
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
   return (
-    <aside>
+    <aside className="sidebar">
+      <div className="logo-container">
+        <img src={StarWars} alt="Star Wars Logo" className="star-logo" />
+      </div>
       <h2>Favorites</h2>
       <ul>
         {favorites.map((favorite) => (

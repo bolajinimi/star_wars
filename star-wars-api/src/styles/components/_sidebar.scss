@@ -44,4 +44,50 @@ aside {
       }
     }
   }
+  .sidebar {
+    background-color: #000; /* Black background for a Star Wars theme */
+    color: #fff; /* White text */
+    padding: 20px;
+    width: 250px; /* Adjust as necessary */
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    margin-bottom: 20px; /* Spacing below the logo */
+  }
+  
+  .star-logo {
+    width: 100%; /* Make logo responsive */
+    max-width: 150px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 15px; /* Space below heading */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+  }
+  
+  li {
+    margin: 10px 0; /* Space between items */
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space between link and button */
+  }
+  
+  button {
+    background-color: #f00; /* Red button */
+    color: #fff; /* White text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c00; /* Darker red on hover */
+  }
   

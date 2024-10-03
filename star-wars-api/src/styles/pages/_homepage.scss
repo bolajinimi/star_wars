@@ -1,22 +1,24 @@
 // src/styles/pages/_homepage.scss
 .homepage {
   padding: 20px;
-  background-color: #f8f9fa; // Light background for contrast
+  background-color: #b9b7a0; // Light background for contrast
 
   h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #343a40; // Darker text color for visibility
+    margin-top: 10px;
+    color: #131105; // Darker text color for visibility
     text-align: center; // Center the title
   }
 
   .table-container {
     max-width: 800px;
     margin: 0 auto; // Center the table container
+    margin-top: 50px; //
     overflow: auto; // Allow scrolling on small screens
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add shadow for depth
-    background-color: #ffffff; // White background for the table
+    background-color: #fff; // White background for the table
 
     .character-table {
       width: 100%;
