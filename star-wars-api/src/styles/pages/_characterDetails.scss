@@ -10,7 +10,7 @@
   .character-name {
     font-size: 32px; // Increase the font size for the name
     margin-bottom: 15px;
-    color: #1a1a1a; // Darker color for better readability
+    color: #d91f1f; // Darker color for better readability
     text-align: center; // Center the name
   }
 
@@ -35,7 +35,7 @@
   }
 
   .favorite-button {
-    background-color: #61dafb;
+    background-color: #040f46;
     color: #ffffff;
     border: none;
     padding: 12px 24px;
@@ -49,7 +49,7 @@
     }
 
     &:hover {
-      background-color: #21a1f1; // Hover effect
+      background-color: #06293e; // Hover effect
     }
   }
 }
